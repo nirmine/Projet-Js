@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Hangout app</title>
+
+    <!-- CSS
+    ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="css/font-awesome-4.5.0/css/font-awesome.min.css">
+    
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+  </head>
+
+  <body ng-app="myApp">
+
+    <!-- header
+    ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+    <div class="w3-container w3-black">
+        <h1>Hang Out !</h1>
+    </div>
+
+
+    <!-- dynamic content placeholder
+    ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+    <div ui-view></div>
+
+
+    <!-- libraries
+    ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+    <script src="jslibs/angular.min.js"></script>
+    <script src="jslibs/angular-ui-router.min.js"></script>
+
+    <!-- controllers
+    ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+    <script src="js/myapp.js"></script>
+    <script src="js/samplefactory.js"></script>
+    <script src="home/homecontroller.js"></script>
+    <script src="login/logincontroller.js"></script>
+    <script src="signup/signup.js"></script>
+
+
+
+  </body>
+
+</html>
