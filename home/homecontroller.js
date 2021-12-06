@@ -7,7 +7,7 @@ myApp.controller('HomeController', ["$scope", "$state",
     $scope.userString = "default value";
 
     $scope.gotologin = function() {
-      $state.go("page2");
+      $state.go("login");
     }
 
   }
