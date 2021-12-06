@@ -9,6 +9,9 @@ myApp.controller('HomeController', ["$scope", "$state",
     $scope.gotologin = function() {
       $state.go("page2");
     }
-
+  /* $scope.data = null;
+      dataService.getData(function(dataResponse) {
+          $scope.data = dataResponse;
+      });*/
   }
 ]);
