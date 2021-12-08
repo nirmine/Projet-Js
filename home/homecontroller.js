@@ -4,7 +4,6 @@ myApp.controller('HomeController', ["$scope", "$state",
 
     console.log('this is the homecontroller, hi!');
 
-    $scope.userString = "default value";
 
     $scope.gotologin = function() {
       $state.go("login");
@@ -12,3 +11,7 @@ myApp.controller('HomeController', ["$scope", "$state",
 
   }
 ]);
+
+
+
+

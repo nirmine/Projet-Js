@@ -1,195 +1,573 @@
 <style>
-  @import url("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
 
-  .login-block {
-    background: #DE6262;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #FFB88C, #DE6262);
-    /* Chrome 10-25, Safari 5.1-6 */
+/*Home Page*/
+
+.home {
+  background: linear-gradient(to bottom, #FFB88C, #DE6262);
+
+}
+
+#navigation {
     background: linear-gradient(to bottom, #FFB88C, #DE6262);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    float: left;
-    width: 100%;
-    padding: 150px;
   }
+  
+#navigation {
+    padding-bottom: 150px;
+    box-sizing:border-box;
+}
 
-  .banner-sec {
-    background: url(https://static.pexels.com/photos/33972/pexels-photo.jpg) no-repeat left bottom;
-    background-size: cover;
-    min-height: 500px;
-    border-radius: 0 10px 10px 0;
+.row {
+  padding-bottom: 50px;
+}
+
+.display-table {
+    display: table;
     padding: 0;
-  }
+    height: 100%;
+    width: 100%;
+}
 
-  .container {
-    background: #fff;
-    border-radius: 10px;
-    width: auto;
-    height: auto;
-    box-shadow: 15px 20px 0px rgba(0, 0, 0, 0.1);
-  }
+.display-table-row {
+    display: table-row;
+    height: 100%;
+}
 
-  .carousel-inner {
-    border-radius: 0 10px 10px 0;
-  }
+.display-table-cell {
+    display: table-cell;
+    float: none;
+    height: 100%;
+}
 
-  .carousel-caption {
-    text-align: left;
-    left: 5%;
-  }
+.v-align {
+    vertical-align: top;
+}
+.logo img {
+    max-width: 180px;
+    padding: 16px 0 17px;
+    width: 100%;
+}
 
-  .login-sec {
-    padding: 50px 30px;
+.header-top {
+    margin: 0;
+    padding-top: 2px;
+    margin: 10px;
+}
+
+.header-top img {
+    border-radius: 40%;
+    max-width: 40px !important;
+    margin: 14px;
+    width: 100%;
+}
+
+.add-project {
+    background: #FFB88C none repeat scroll 0 0;
+    border-radius: 100px;
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 27px 10px 27px;
     position: relative;
-  }
+}
 
-  .login-sec .copy-text {
+
+
+.add-project:hover {
+    color: #ffffff;
+    background-color: #DE6262;    
+}
+
+.header-top i {
+    color: #FFB88C;
+}
+
+.icon-info {
+    position: relative;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  
+.navi i {
+    font-size: 20px;
+}
+
+.label.label-primary {
+    border-radius: 35%;
+    background-color: #DE6262;
+    font-size: 10px ;
+    left: 8px;
     position: absolute;
-    width: 80%;
-    bottom: 20px;
-    font-size: 13px;
+    top: -9px;
+}
+
+.icon-info .label {
+    border: 2px solid #ffffff;
+    font-weight: 500;
+    padding: 3px 5px;
     text-align: center;
-  }
+}
 
-  .login-sec .copy-text i {
-    color: #FEB58A;
-  }
-
-  .login-sec .copy-text a {
-    color: #E36262;
-  }
-
-  .login-sec h2 {
-    margin-bottom: 30px;
-    font-weight: 800;
-    font-size: 30px;
+.header-top li {
+    display: inline-block;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: #DE6262;
+    
   }
 
-  .login-sec h2:after {
+.header-top .dropdown-toggle {
+    color: #E36262;
+}
+
+.header-top .dropdown-menu {
+    border: medium none;
+    left: -100px;
+    padding: 25px;
+}
+
+
+.navbar-content > span {
+    font-size: 20px;
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+
+.img-responsive {
+    width: 100%;
+}
+
+ul {
+list-style-type: none;
+margin: -10px;
+padding: 0;
+}
+
+.search input {
+    border: none;
+    font-size: 15px;
+    padding: 5px 9px;
+    width: 100%;
+    margin-top: 35px;
+    color: #8492af;
+}
+
+header {
+    background: #ffffff none repeat scroll 0 0;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.15);
+    display: inline-block !important;
+    line-height: 23px;
+    margin-left: 50px;
+    margin-top: 23px;
+    width: 90%;
+    
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.logo {
+    text-align: center;
+}
+
+.navi a {
+  
+    font-family: -apple-system,BlinkMacSystemFont,
+    "Segoe UI",Roboto,"Helvetica Neue",
+    Arial,sans-serif,"Apple Color Emoji",
+    "Segoe UI Emoji","Segoe UI Symbol";
+
+    color: #ffffff;
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 28px  20px  ;
+    
+}
+
+.navi i {
+    color: #f3f3f3;
+    padding-right: 20px;
+}
+
+.navi .active a {
+    background: #FEB58A;
+    border-left: 0px;
+    margin-left: 0;
+}
+
+.navi a:hover {
+    background: #FEB58A none repeat scroll 0 0;
+    border-left: 5px solid #E36262;
+    display: block;
+    padding-left: 15px;
+    
+
+}
+
+.navbar-default {
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+
+.navbar-toggle {
+    border: none;
+}
+
+
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #DE6262;
+}
+
+.circle-logo {
+    margin: 0 auto;
+    max-width: 150px !important;
+    text-align: center;
+    border-radius: 10%;
+}
+
+
+.user-dashboard {
+    padding: 50px 100px;
+}
+
+.user-dashboard h1 {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-bottom: 30px;
+  font-weight: 800;
+  font-size: 30px;
+  color: #DE6262;
+  font-size: 30px;
+  margin: 0;
+  letter-spacing: 1px;
+  padding: 21px 0;
+  
+  
+}
+
+.user-dashboard h1:after{
     content: " ";
-    width: 100px;
-    height: 5px;
+    width: 500px;
+    height: 3px;
     background: #FEB58A;
     display: block;
     margin-top: 20px;
+    margin-bottom: 30px;
     border-radius: 3px;
-    margin-left: auto;
-    margin-right: auto
-  }
+    margin-right: auto;
+}
 
-  .btn-login {
-    background: #DE6262;
-    color: #fff;
-    font-weight: 600;
-  }
+p {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 2PX;
+    color: #E36262;
+  
+}
 
-  .banner-text {
-    width: 70%;
+ul {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 2px;
+    padding-left: 30px;
+    
+
+}
+
+.container {
+  background: #ffff;
+  border-radius: 10px;
+  box-shadow: 15px 15px 0px rgba(0, 0, 0, 0.2);
+  margin-top: 60px;
+}
+
+.sales {
+    background: #ffffff ;
+    border:  1px solid #FEB58A;
+    border-radius: 20px;
+    padding: 15px;  
+    margin-bottom: 40px;
+    width: 100%;
+    height: 90%;
+    
+}
+.sales button {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: 1px solid #dadee7;
+    border-radius: 0px;
+    font-size: 0 px;
+    letter-spacing: 5px;
+    margin-left: 50px;
+    color: #0e1a35;
+}
+
+.sales button::before {
+    font-family: FontAwesome;
     position: absolute;
-    bottom: 40px;
-    padding-left: 20px;
-  }
+    right: 11px;
+    top: 11px;
+}
 
-  .banner-text h2 {
-    color: #fff;
+.sales  .btn-group {
+    float:inline-end;
+    padding-left: 300px ;
+    width: 500px ;
+  
+}
+.sales h2 {
+    font-family: ;
+    color: #8492af;
+    float: left;
+    font-size: 21px;
     font-weight: 600;
-  }
+    margin: 0;
+    padding:  0 0;
+}
 
-  .banner-text h2:after {
-    content: " ";
-    width: 100px;
-    height: 5px;
-    background: #FFF;
-    display: block;
-    margin-top: 20px;
-    border-radius: 3px;
-  }
+.sales label {
+    color: #8492af;
+    float: left;
+    font-size: 21px;
+    font-weight: 600;
+    margin: 0;
+    padding-right: 90px;
+}
+.btn.btn-secondary.btn-lg.dropdown-toggle > span {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+.sales .dropdown-menu{
+    float: inline-start;
+    margin: 10px;
+    padding: 0px;
+    border: 0px;
+    border-radius: 8px;
+    width: 100%;
+}
+.sales .btn-group.open .dropdown-toggle, .btn.active, .btn:active{
+    box-shadow: none;
+}
 
-  .banner-text p {
-    color: #fff;
-  }
+.sales .dropdown-menu > a {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display:list-item ;
+    font-weight: 500;
+    padding: 0px 10px 0px 10px ;
+    text-align: left;
+    letter-spacing: 1px;
+    width: 100%;
+    color: #E36262;
+}
+
+.sales .dropdown-menu > a:hover{
+    color: #FEB58A;   
+}
+
+
+.search input:focus{
+    border-bottom: 10px solid #FFB88C;.
+    line-height:22px;
+    transition: 1s all;
+}
+
 </style>
 
 
-<section class="login-block">
-  <div class="container">
-    <div class="row" ng-controller="LoginController">
-      <div class="col-md-4 login-sec">
-        <h2 class="text-center">Login Now</h2>
-        <form class="login-form">
-          <div class="form-group">
-            <label for="exampleInputEmail1" class="text-uppercase">Username</label>
-            <input type="text" class="form-control" placeholder="">
 
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1" class="text-uppercase">Password</label>
-            <input type="password" class="form-control" placeholder="">
-          </div>
+<body class="home" >
+  <div class="container-fluid display-table">
+    <div class="row display-table-row home ">
+      <div class="col-md-2 col-sm-1 display-table-cell v-align box" id="navigation">
+        <div class="logo">
+          <a href="home.html">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/EatOut.png" class="circle-logo">
+          </a>
+        </div>
 
-
-          <div class="form-check">
-            <label class="form-check-label">
-              <input type="checkbox" class="form-check-input">
-              <small>Remember Me</small>
-            </label>
-            <button type="submit" class="btn btn-login float-right">Go !</button>
-          </div>
-
-        </form>
-        <div class="copy-text">You don't have an wazea ? <i class="fa fa-heart"></i> <a ng-click="gotosignup()">Sign
-            Up now </a></div>
+        <!--Side NavBar -->
+        <div class="navi">
+          <ul>
+            <li class="active"><a href="#"><i class="fa fa-home" aria-hidden="true"></i><span
+                  class="hidden-xs hidden-sm">Home</span></a></li> 
+            <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i><span
+                  class="hidden-xs hidden-sm">Friends</span></a></li>
+            <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i><span
+                  class="hidden-xs hidden-sm">Fixed programs</span></a></li>
+            <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i><span
+                  class="hidden-xs hidden-sm">Setting</span></a></li>
+          </ul>
+        </div>
       </div>
-      <div class="col-md-8 banner-sec">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          </ol>
-          <div class=" carousel-inner" role="listbox">
-            <div class="carousel-item active">
-              <img class="d-block img-fluid"
-                src="https://thumbnails.production.thenounproject.com/SD1ws4U7BL7qWfogRK240xR774s=/fit-in/1000x1000/photos.production.thenounproject.com/photos/19616C36-C9E1-4C6E-AB99-2FDE294FCB76.jpg"
-                alt="First slide">
-              <div class="carousel-caption d-none d-md-block">
-                <div class="banner-text">
-                  <h2>Let's Hang out !</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                    nostrud exercitation</p>
+      <div class="col-md-10 col-sm-11 display-table-cell v-align">
+        <!--<button type="button" class="slide-toggle">Slide Toggle</button> -->
+        <div class="row">
+          <header>
+            <div class="col-md-7">
+              <!--<nav class="navbar-default pull-left">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="offcanvas" data-target="#side-menu"
+                    aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                </div>
+              </nav>-->
+              <div class="search">  
+                <input type="text" placeholder="Search" id="search">
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="header-rightside">
+                <ul class="list-inline header-top pull-right ">
+                  <li class="hidden-xs"><a href="#" class="add-project" data-toggle="modal"data-target="#add_project">Log out</a></li>
+                    <a href="#" class="icon-info">
+                      <i class="fa fa-bell" aria-hidden="true"></i>
+                      <span class="label label-primary">3</span>
+                    </a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img
+                        src="https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="user">
+                      </a>
+                    <ul class="dropdown-menu" ng-controller="HomeController">
+                      <li>
+                        <div class="navbar-content">
+                          <span>Flena Flenya</span>
+                          <p class="text-muted small">
+                            flena@flenya.com
+                          </p>
+                          <div class="divider">
+                          </div>
+                          <a ng-click="gotologin()" > ere </a>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </header>
+        </div>
+
+        
+        <div class="user-dashboard container">
+          <h1>Hungry again ? Let's go eat !</h1>
+
+          <div class="row" >
+            <div class="col-md-5 col-sm-5 col-xs-12 ">
+
+              <div class="sales">
+                <h2>Postal Code </h2>
+                <div class="search">
+                  <input type="text" placeholder="Exemple : 91000" id="search">
                 </div>
               </div>
             </div>
-            <div class="carousel-item">
-              <img class="d-block img-fluid"
-                src="https://thumbnails.production.thenounproject.com/SD1ws4U7BL7qWfogRK240xR774s=/fit-in/1000x1000/photos.production.thenounproject.com/photos/19616C36-C9E1-4C6E-AB99-2FDE294FCB76.jpg"
-                alt="First slide">
-              <div class="carousel-caption d-none d-md-block">
-                <div class="banner-text">
-                  <h2>This is Heaven</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                    nostrud exercitation</p>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img class="d-block img-fluid" src="https://images.pexels.com/photos/872957/pexels-photo-872957.jpeg"
-                alt="First slide">
-              <div class="carousel-caption d-none d-md-block">
-                <div class="banner-text">
-                  <h2>This is Heaven</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                    nostrud exercitation</p>
+            <div class="col-md-7 col-sm-7 col-xs-12 gutter">
+
+              <div class="sales report">
+                <h2>Invited Friends </h2>
+                <div class="btn-group">
+                  <button class="btn " type="button" data-toggle="dropdown"
+                    aria-haspopup="false" aria-expanded="true">   
+                  </button>
+                  <div class="dropdown-menu">
+                    <a href="#">Hejer Goutel</a>
+                    <a href="#">Nirmine Khalled</a>
+                    <a href="#">Sami Ben Mabrouk</a>
+                    <a href="#">Kais Saied</a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
+          <div class="row">
+            <div class="col-md-5 col-sm-5 col-xs-12 gutter">
+          
+              <div class="sales">
+                <label for="start">Start date:</label>
+                <input type="date" id="start" name="trip-start" value="2021-12-24" min="2021-12-15" max="2050-12-12">
+              </div>
+            </div>
+            <div class="col-md-7 col-sm-7 col-xs-12 gutter">
+          
+              <div class="sales report">
+                <label for="appt">Choose a time:  </label>
+                <input type="time" id="appt" name="appt" min="08:00" max="23:00" required>
+                <small>Restaurents close at 22h </small>
+
+                </div>
+              </div>
+          </div>
+
+          <div class="row">
+            
+          
+              <div class="sales">
+                <p> Here are the restaurent available near you :  </p>
+                <ul>
+                  <li> <a href="#">Chillis</a> </li>
+                  <li> <a href="#">Plan B</a> </li>
+                  <li> <a href="#">Pasta Cosi</a> </li>
+                  <li> <a href="#">Farm Ranch</a> </li>
+                </ul>
+              </div>
+            
+            
+          </div>
+        
+          <div class="row">
+            <div style="margin:auto; padding-top : 50px;">
+              <a href="#" class="add-project" data-target="#add_project">Confirm  </a></li>
+            </div>
+          
+          
+          </div>
+        
         </div>
       </div>
     </div>
-</section>
+  </div>
+
+  
+
+
+
+  <!-- Modal 
+  <div id="add_project" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content
+      <div class="modal-content">
+        <div class="modal-header login-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h4 class="modal-title">Add Project</h4>
+        </div>
+        <div class="modal-body">
+          <input type="text" placeholder="Project Title" name="name">
+          <input type="text" placeholder="Post of Post" name="mail">
+          <input type="text" placeholder="Author" name="passsword">
+          <textarea placeholder="Desicrption"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="cancel" data-dismiss="modal">Close</button>
+          <button type="button" class="add-project" data-dismiss="modal">Save</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+-->
