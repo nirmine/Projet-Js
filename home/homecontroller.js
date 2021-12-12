@@ -4,7 +4,6 @@ myApp.controller('HomeController', ["$scope", "$state",
 
     console.log('this is the homecontroller, hi!');
 
-    $scope.userString = "default value";
 
     $scope.gotologin = function() {
       $state.go("login");
@@ -13,5 +12,18 @@ myApp.controller('HomeController', ["$scope", "$state",
       dataService.getData(function(dataResponse) {
           $scope.data = dataResponse;
       });*/
+
+    $scope.gotofriends = function () {
+      $state.go("friends");
+    }
+
+    $scope.gotoprograms = function () {
+      $state.go("programs");
+    }
+
   }
 ]);
+
+
+
+
