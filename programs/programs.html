@@ -1,0 +1,832 @@
+<style>
+    /*Home Page*/
+    @import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic");
+    @import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
+
+    
+    .event-list {
+		list-style: none;
+		font-family: 'Lato', sans-serif;
+		margin: 0px;
+		padding: 0px;
+	}
+	.event-list > li {
+		background-color: rgb(255, 255, 255);
+		box-shadow: 0px 0px 5px rgb(51, 51, 51);
+		box-shadow: 0px 0px 5px rgba(51, 51, 51, 0.7);
+		padding: 0px;
+		margin: 0px 0px 20px;
+	}
+	.event-list > li > time {
+		display: inline-block;
+		width: 100%;
+		color: rgb(255, 255, 255);
+		background-color: rgb(197, 44, 102);
+		padding: 5px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	.event-list > li:nth-child(even) > time {
+		background-color: rgb(165, 82, 167);
+	}
+	.event-list > li > time > span {
+		display: none;
+	}
+	.event-list > li > time > .day {
+		display: block;
+		font-size: 56pt;
+		font-weight: 100;
+		line-height: 1;
+	}
+	.event-list > li time > .month {
+		display: block;
+		font-size: 24pt;
+		font-weight: 900;
+		line-height: 1;
+	}
+	.event-list > li > img {
+		width: 100%;
+	}
+	.event-list > li > .info {
+		padding-top: 5px;
+		text-align: center;
+	}
+	.event-list > li > .info > .title {
+		font-size: 17pt;
+		font-weight: 700;
+		margin: 0px;
+	}
+	.event-list > li > .info > .desc {
+		font-size: 13pt;
+		font-weight: 300;
+		margin: 0px;
+	}
+	.event-list > li > .info > ul,
+	.event-list > li > .social > ul {
+		display: table;
+		list-style: none;
+		margin: 10px 0px 0px;
+		padding: 0px;
+		width: 100%;
+		text-align: center;
+	}
+	.event-list > li > .social > ul {
+		margin: 0px;
+	}
+	.event-list > li > .info > ul > li,
+	.event-list > li > .social > ul > li {
+		display: table-cell;
+		cursor: pointer;
+		color: rgb(30, 30, 30);
+		font-size: 11pt;
+		font-weight: 300;
+        padding: 3px 0px;
+	}
+    .event-list > li > .info > ul > li > a {
+		display: block;
+		width: 100%;
+		color: rgb(30, 30, 30);
+		text-decoration: none;
+	} 
+    .event-list > li > .social > ul > li {    
+        padding: 0px;
+    }
+    .event-list > li > .social > ul > li > a {
+        padding: 3  0px 0px;
+	} 
+	.event-list > li > .info > ul > li:hover,
+	.event-list > li > .social > ul > li:hover {
+		color: #E36262;
+		background-color: rgb(200, 200, 200);
+	}
+	.facebook a,
+	.twitter a,
+	.google-plus a {
+		display: block;
+		width: 100%;
+		color: rgb(75, 110, 168) !important;
+	}
+	.twitter a {
+		color: rgb(79, 213, 248) !important;
+	}
+	.google-plus a {
+		color: rgb(221, 75, 57) !important;
+	}
+	.facebook:hover a {
+		color: rgb(255, 255, 255) !important;
+		background-color: rgb(75, 110, 168) !important;
+	}
+	.twitter:hover a {
+		color: rgb(255, 255, 255) !important;
+		background-color: rgb(79, 213, 248) !important;
+	}
+	.google-plus:hover a {
+		color: rgb(255, 255, 255) !important;
+		background-color: rgb(221, 75, 57) !important;
+	}
+
+	@media (min-width: 768px) {
+		.event-list > li {
+			position: relative;
+            display: block;
+			width: 1000px;
+			height: 120px;
+			padding: 0px;
+		}
+		.event-list > li > time {
+			display: inline-block;
+		}
+		.event-list > li > time{
+			width: 120px;
+			float: left;
+		}
+		.event-list > li > .info {
+			background-color: rgb(255, 255, 255);
+			overflow: hidden;
+		}
+		.event-list > li > time,
+		.event-list > li > img {
+			width: 120px;
+			height: 120px;
+			padding: 0px;
+			margin: 0px;
+		}
+		.event-list > li > .info {
+			position: relative;
+			height: 120px;
+			text-align: left;
+			padding-right: 20px;
+		}	
+		.event-list > li > .info > .title, 
+		.event-list > li > .info > .desc {
+			padding: 0px 10px;
+		}
+		.event-list > li > .info > ul {
+			position: absolute;
+			left: 0px;
+			bottom: 0px;
+		}
+		.event-list > li > .social {
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			display: block;
+			width: 40px;
+		}
+        .event-list > li > .social > ul {
+            border-left: 1px solid rgb(230, 230, 230);
+        }
+		.event-list > li > .social > ul > li {			
+			display: block;
+            padding: 0px;
+		}
+		.event-list > li > .social > ul > li > a {
+			display: block;
+			width: 40px;
+            height: 120px;
+			padding: 10px 0px 9px;
+		}
+	}
+
+   /***********************************************************/
+    .home {
+        background: linear-gradient(to bottom, #FFB88C, #DE6262);
+
+    }
+
+    #navigation {
+        background: linear-gradient(to bottom, #FFB88C, #DE6262);
+    }
+
+    #navigation {
+        padding-bottom: 150px;
+        box-sizing: border-box;
+    }
+
+    .row {
+        padding-bottom: 50px;
+    }
+
+    .display-table {
+        display: table;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    .display-table-row {
+        display: table-row;
+        height: 100%;
+    }
+
+    .event-list {
+		list-style: none;
+		font-family: 'Lato', sans-serif;
+		margin: 0px;
+		padding: 0px;
+	}
+
+    .display-table-cell {
+        display: table-cell;
+        float: none;
+        height: 100%;
+    }
+
+    .v-align {
+        vertical-align: top;
+    }
+
+    .logo img {
+        max-width: 180px;
+        padding: 16px 0 17px;
+        width: 100%;
+    }
+
+    .header-top {
+        margin: 0;
+        padding-top: 2px;
+        margin: 10px;
+    }
+
+    .header-top img {
+        border-radius: 40%;
+        max-width: 40px !important;
+        margin: 14px;
+        width: 100%;
+    }
+
+    .add-project {
+        background: #FFB88C none repeat scroll 0 0;
+        border-radius: 100px;
+        color: #ffffff;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 10px 27px 10px 27px;
+        position: relative;
+    }
+
+
+
+    .add-project:hover {
+        color: #ffffff;
+        background-color: #DE6262;
+    }
+
+    .header-top i {
+        color: #FFB88C;
+    }
+
+    .icon-info {
+        position: relative;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .navi i {
+        font-size: 20px;
+    }
+
+    .label.label-primary {
+        border-radius: 35%;
+        background-color: #DE6262;
+        font-size: 10px;
+        left: 8px;
+        position: absolute;
+        top: -9px;
+    }
+
+    .icon-info .label {
+        border: 2px solid #ffffff;
+        font-weight: 500;
+        padding: 3px 5px;
+        text-align: center;
+    }
+
+    .header-top li {
+        display: inline-block;
+        text-align: center;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: #DE6262;
+
+    }
+
+    .header-top .dropdown-toggle {
+        color: #E36262;
+    }
+
+    .header-top .dropdown-menu {
+        border: medium none;
+        left: -100px;
+        padding: 25px;
+    }
+
+
+    .navbar-content>span {
+        font-size: 20px;
+        font-weight: 100;
+        letter-spacing: 2px;
+    }
+
+    .img-responsive {
+        width: 100%;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: -10px;
+        padding: 0;
+    }
+
+    .search input {
+        border: none;
+        font-size: 15px;
+        padding: 5px 9px;
+        width: 100%;
+        margin-top: 35px;
+        color: #8492af;
+    }
+
+    header {
+        background: #ffffff none repeat scroll 0 0;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.15);
+        display: inline-block !important;
+        line-height: 23px;
+        margin-left: 50px;
+        margin-top: 23px;
+        width: 90%;
+
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    .navi a {
+
+        font-family: -apple-system, BlinkMacSystemFont,
+            "Segoe UI", Roboto, "Helvetica Neue",
+            Arial, sans-serif, "Apple Color Emoji",
+            "Segoe UI Emoji", "Segoe UI Symbol";
+
+        color: #ffffff;
+        display: block;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        padding: 28px 20px;
+
+    }
+
+    .navi i {
+        color: #f3f3f3;
+        padding-right: 20px;
+    }
+
+    .navi .active a {
+        background: #FEB58A;
+        border-left: 0px;
+        margin-left: 0;
+    }
+
+    .navi a:hover {
+        background: #FEB58A none repeat scroll 0 0;
+        border-left: 5px solid #E36262;
+        display: block;
+        padding-left: 15px;
+
+
+    }
+
+    .navbar-default {
+        background-color: #ffffff;
+        border-color: #ffffff;
+    }
+
+    .navbar-toggle {
+        border: none;
+    }
+
+
+
+    .navbar-default .navbar-toggle .icon-bar {
+        background-color: #DE6262;
+    }
+
+    .circle-logo {
+        margin: 0 auto;
+        max-width: 150px !important;
+        text-align: center;
+        border-radius: 10%;
+    }
+
+
+    .user-dashboard {
+        padding: 50px 100px;
+    }
+
+    .user-dashboard h1 {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin-bottom: 30px;
+        font-weight: 800;
+        font-size: 30px;
+        color: #DE6262;
+        font-size: 30px;
+        margin: 0;
+        letter-spacing: 1px;
+        padding: 21px 0;
+
+
+    }
+
+    .user-dashboard h1:after {
+        content: " ";
+        width: 500px;
+        height: 3px;
+        background: #FEB58A;
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        border-radius: 3px;
+        margin-right: auto;
+    }
+
+    p {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 500;
+        font-size: 15px;
+        margin: 20px 0 0 0;
+        color: #0e1a35;
+
+    }
+
+    ul {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin-bottom: 30px;
+        font-weight: 500;
+        font-size: 15px;
+        letter-spacing: 2px;
+        padding-left: 30px;
+
+
+    }
+
+    .container {
+        background: #ffff;
+        border-radius: 10px;
+        box-shadow: 15px 15px 0px rgba(0, 0, 0, 0.2);
+        margin-top: 60px;
+        margin-bottom: 300px;
+    }
+
+    .sales {
+        background: #ffffff;
+        border: 1px solid #FEB58A;
+        border-radius: 20px;
+        padding: 15px;
+        margin: 10px;
+        width: 100%;
+        height: 90%;
+
+    }
+
+    .sales button {
+        background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+        border: 1px solid #dadee7;
+        border-radius: 0px;
+        font-size: 0 px;
+        letter-spacing: 5px;
+        margin-left: 50px;
+        color: #0e1a35;
+    }
+
+    .sales button::before {
+        font-family: FontAwesome;
+        position: absolute;
+        right: 11px;
+        top: 11px;
+    }
+
+    .sales .btn-group {
+        float: inline-end;
+        padding-left: 300px;
+        width: 500px;
+
+    }
+
+    .sales h2 {
+        font-family: ;
+        color: #8492af;
+        float: left;
+        font-size: 21px;
+        font-weight: 600;
+        margin: 0;
+        padding: 0 0;
+    }
+
+    .sales label {
+        color: #8492af;
+        float: left;
+        font-size: 21px;
+        font-weight: 600;
+        margin: 0;
+        padding-right: 90px;
+    }
+
+    .btn.btn-secondary.btn-lg.dropdown-toggle>span {
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+    }
+
+    .sales .dropdown-menu {
+        float: inline-start;
+        margin: 10px;
+        padding: 0px;
+        border: 0px;
+        border-radius: 8px;
+        width: 100%;
+    }
+
+    .sales .btn-group.open .dropdown-toggle,
+    .btn.active,
+    .btn:active {
+        box-shadow: none;
+    }
+
+    .sales .dropdown-menu>a {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        display: list-item;
+        font-weight: 500;
+        padding: 0px 10px 0px 10px;
+        text-align: left;
+        letter-spacing: 1px;
+        width: 100%;
+        color: #E36262;
+    }
+
+    .sales .dropdown-menu>a:hover {
+        color: #FEB58A;
+    }
+
+
+    .search input:focus {
+        border-bottom: 10px solid #FFB88C;
+        . line-height: 22px;
+        transition: 1s all;
+    }
+</style>
+
+
+
+<body class="home">
+    <div class="container-fluid display-table">
+        <div class="row display-table-row home ">
+            <div class="col-md-2 col-sm-1 display-table-cell v-align box" id="navigation">
+                <div class="logo">
+                    <a href="#">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/EatOut.png" class="circle-logo">
+                    </a>
+                </div>
+
+                <!--Side NavBar -->
+                <div class="navi" ng-controller="FriendsController">
+                    <ul>
+                        <li><a ng-click="gotohome()"><i class="fa fa-home" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Home</span></a>
+                        </li>
+                        <li><a ng-click="gotofriends()"><i class="fa fa-user" aria-hidden="true"></i><span
+                                    class="hidden-xs hidden-sm">Profile</span></a></li>
+                        <li class="active"><a ng-click="gotoprograms()"><i class="fa fa-calendar" aria-hidden="true"></i><span
+                                    class="hidden-xs hidden-sm">Fixed programs</span></a></li>
+                
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="col-md-10 col-sm-11 display-table-cell v-align">
+                <!--<button type="button" class="slide-toggle">Slide Toggle</button> -->
+                <div class="row">
+                    <header>
+                        <div class="col-md-7">
+                            <!--<nav class="navbar-default pull-left">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="offcanvas" data-target="#side-menu"
+                    aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                </div>
+              </nav>-->
+                            <div class="search">
+                                <input type="text" placeholder="Search" id="search">
+                            </div>
+                        </div>
+                        <div class="col-md-5" ng-controller="HomeController">
+                            <div class="header-rightside">
+                                <ul class="list-inline header-top pull-right ">
+                                    <li class="hidden-xs"><a style="color:#ffffff;" ng-click="gotologin()"
+                                            class="add-project" data-toggle="modal" data-target="#add_project">Log
+                                            out</a></li>
+                                    <a href="#" class="icon-info">
+                                        <i class="fa fa-bell" aria-hidden="true"></i>
+                                        <span class="label label-primary">3</span>
+                                    </a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img
+                                                src="https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                                                alt="user">
+                                        </a>
+                                        <ul class="dropdown-menu" ng-controller="HomeController">
+                                            <li>
+                                                <div class="navbar-content">
+                                                    <span>Flena Flenya</span>
+                                                    <p class="text-muted small">
+                                                        flena@flenya.com
+                                                    </p>
+                                                    <div class="divider">
+                                                    </div>
+                                                    <a ng-click="gotologin()"> View Profile </a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </header>
+                </div>
+
+
+                <div class="user-dashboard container">
+                    <h1>Let's see what we're gonna do ! </h1>
+
+                    <div class="row">
+                            <div class="[ col-xs-12 col-sm-8 ]">
+                                <ul class="event-list">
+                                    <li>
+                                        <time datetime="2014-07-20 2000">
+                                            <span class="day">20</span>
+                                            <span class="month">Jan</span>
+                                            <span class="year">2014</span>
+                                            <span class="time">8:00 PM</span>
+                                        </time>
+                                        <div class="info">
+                                            <h2 class="title">Mouse0270's 24th Birthday!</h2>
+                                            <p class="desc">The chinese restaurant in the corner</p>
+                                            <ul>
+                                                <li style="width:33%;">10:30 AM <span class="fa fa-clock-o"></span></li>
+                                                <li style="width:33%;"><a data-toggle="modal" data-target="#squarespaceModal"><span class="fa fa-info"></span></a></li>
+                                                <li style="width:34%;"><a data-toggle="modal" data-target="#squarespaceModal"> Friends<span class="fa fa-users" style="margin-left: 10px;"></span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="social">
+                                            <ul>
+                                                <li class="google-plus"><a href="#google-plus"><span class="fa fa-trash"></span></a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <time datetime="2014-07-20 2000">
+                                            <span class="day">20</span>
+                                            <span class="month">Jan</span>
+                                            <span class="year">2014</span>
+                                            <span class="time">8:00 PM</span>
+                                        </time>
+                                        <div class="info">
+                                            <h2 class="title">Mouse0270's 24th Birthday!</h2>
+                                            <p class="desc">Bar Hopping in Erie, Pa.</p>
+                                            <ul>
+                                                <li style="width:33%;">10:30 AM <span class="fa fa-clock-o"></span></li>
+                                                <li style="width:33%;"><a data-toggle="modal" data-target="#squarespaceModal"><span class="fa fa-info"></span></a></li>
+                                                <li style="width:34%;"><a data-toggle="modal" data-target="#squarespaceModal"> Friends<span class="fa fa-users" style="margin-left: 10px;"></span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="social">
+                                            <ul>
+                                                <li class="google-plus"><a href="#google-plus"><span class="fa fa-trash"></span></a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <time datetime="2014-07-20 2000">
+                                            <span class="day">20</span>
+                                            <span class="month">Jan</span>
+                                            <span class="year">2014</span>
+                                            <span class="time">8:00 PM</span>
+                                        </time>
+                                        <div class="info">
+                                            <h2 class="title">Mouse0270's 24th Birthday!</h2>
+                                            <p class="desc">Bar Hopping in Erie, Pa.</p>
+                                            <ul>
+                                                <li style="width:33%;">10:30 AM <span class="fa fa-clock-o"></span></li>
+                                                <li style="width:33%;"><a data-toggle="modal" data-target="#squarespaceModal"><span class="fa fa-info"></span></a>
+                                                </li>
+                                                <li style="width:34%;"><a data-toggle="modal" data-target="#squarespaceModal"> Friends<span class="fa fa-users"
+                                                            style="margin-left: 10px;"></span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="social">
+                                            <ul>
+                                                <li class="google-plus"><a href="#google-plus"><span class="fa fa-trash"></span></a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                    </div>
+
+                    <div class="row" ng-controller="ProgramsController">
+                        <div style="margin:auto; padding-top : 50px;" >
+                            <a ng-click="gotohome()" class="add-project" data-target="#add_project">Add new program </a></li>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Modal 
+  <div id="add_project" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content
+      <div class="modal-content">
+        <div class="modal-header login-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h4 class="modal-title">Add Project</h4>
+        </div>
+        <div class="modal-body">
+          <input type="text" placeholder="Project Title" name="name">
+          <input type="text" placeholder="Post of Post" name="mail">
+          <input type="text" placeholder="Author" name="passsword">
+          <textarea placeholder="Desicrption"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="cancel" data-dismiss="modal">Close</button>
+          <button type="button" class="add-project" data-dismiss="modal">Save</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+-->
+
+
+
+
+
+
+
+
+
+<div class="modal" id="squarespaceModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
+                        class="sr-only">Close</span></button>
+            </div>
+
+            <div class="modal-body">
+
+                <!-- content goes here -->
+                    <div>
+                        <label style="padding-bottom: 20px;">Friends</label>
+                        <ul>
+                            <li>Sami piseron</li>
+                            <li>Rabie Bouden</li>
+                            <li>Fathi haddaoui</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <label>Description</label>
+                        <p>
+                            Description de l'evenement
+                        </p>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>

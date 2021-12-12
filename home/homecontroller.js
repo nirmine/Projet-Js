@@ -9,6 +9,14 @@ myApp.controller('HomeController', ["$scope", "$state",
       $state.go("login");
     }
 
+    $scope.gotofriends = function () {
+      $state.go("friends");
+    }
+
+    $scope.gotoprograms = function () {
+      $state.go("programs");
+    }
+
   }
 ]);
 
