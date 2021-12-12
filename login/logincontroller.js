@@ -10,6 +10,11 @@ myApp.controller('LoginController', ["$scope", "$state","sampleFactory",
       
       $state.go("signup");
     }
+    $scope.login=function()
+    {
+      
+    }
+
 
   }
 ]);

@@ -21,6 +21,7 @@ myApp.controller('HomeController', ["$scope", "$state",
       $state.go("programs");
     }
 
+ 
   }
 ]);
 
