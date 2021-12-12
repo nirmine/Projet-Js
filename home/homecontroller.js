@@ -13,5 +13,6 @@ myApp.controller('HomeController', ["$scope", "$state",
       dataService.getData(function(dataResponse) {
           $scope.data = dataResponse;
       });*/
+ 
   }
 ]);
