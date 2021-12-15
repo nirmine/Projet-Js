@@ -414,14 +414,17 @@ ul {
         <div class="user-dashboard container">
           <h1>Hungry again ? Let's go eat !</h1>
 
+          
           <div class="row" >
               <div class="sales">
                 <h2>Postal Code </h2>
                 <div class="search">
-                  <input type="text" placeholder="Exemple : 91000" id="search">
+                  <input type="text" placeholder="Exemple : 91000" id="search" ng-controller="ApiController"  ng-model="postalCode" name="postalCode"  id="postalCode" ng-change="hello(postalCode)">
+                  <label>{{postalCode}}</label>
                 </div>
               </div>
           </div>
+         
 
           <div class="row">
             <div class="sales">
@@ -463,13 +466,13 @@ ul {
           <div class="row">
             
           
-              <div class="sales">
+              <div class="sales" ng-controller="ApiController" >
                 <p> Here are the restaurent available near you :  </p>
                 <ul>
-                  <li> <a href="#">Chillis</a> </li>
-                  <li> <a href="#">Plan B</a> </li>
+                  <li ng-repeat="r in restaus"> <a href="#">{{r.fields.nom_restaurant}} à {{r.fields.adresse}} {{r.fields.code}}</a> </li>
+                 <!-- <li> <a href="#">Plan B</a> </li>
                   <li> <a href="#">Pasta Cosi</a> </li>
-                  <li> <a href="#">Farm Ranch</a> </li>
+                  <li> <a href="#">Farm Ranch</a> </li>-->
                 </ul>
               </div>
             
@@ -488,12 +491,17 @@ ul {
         
           <div class="row">
             <div style="margin:auto; padding-top : 50px;">
-              <a href="#" class="add-project" data-target="#add_project">Confirm  </a></li>
+              <a href="#" class="add-project" data-target="#add_project" ngClick="Submit" >Confirm  </a></li>
+            
             </div>
           
-          
+           
+              
+        
+
           </div>
         
+
         </div>
       </div>
     </div>

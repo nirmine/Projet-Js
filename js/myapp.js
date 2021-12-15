@@ -34,39 +34,27 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('home');
 
 });
-/*myApp.service('dataService', function($http) {
-   delete $http.defaults.headers.common['X-Requested-With'];
-   this.getData = function(callbackFunc) {
-       $http({
-           method: 'GET',
-           url: 'https://opendata.paris.fr/api/records/1.0/search/?dataset=restaurants-casvp&q=&facet=code&facet=nom_restaurant&facet=type',
-          // params: 'limit=10, sort_by=created:desc',
-           headers: {'Authorization': 'Token token=xxxxYYYYZzzz'}
-        }).success(function(data){
-           console.log(data);
-           alert('success');
-       }).error(function(){
-           alert("error");
-       });
-    }
-   });*/
+
 myApp.service('nodeService', function($http) {
       delete $http.defaults.headers.common['Content-Type, x-requested-with'];
       this.getData = function(callbackFunc) {
           $http({
               method: 'GET',
-              url: 'http://localhost:3000/hello',
+              url: 'http://localhost:3000/hello/10',
              // params: 'limit=10, sort_by=created:desc',
-              headers: {'Authorization': 'Token token=xxxxYYYYZzzz'}
+              headers: {'Authorization': 'Token token=xxxxYYYYZzzz'},
+             // data:'id='+'10'
            }).success(function(data){
              // return data;
-             console.log(data)
+             console.log(data)//la valeur dans le body du json
               alert('success');
           }).error(function(){
               alert("error");
           });
        }
       });
+
+
 
   myApp.controller('AngularJSCtrl', function($scope, nodeService) {
       $scope.data = null;
@@ -77,8 +65,10 @@ myApp.service('nodeService', function($http) {
       {*/
         // alert("hi");
       //}
-      nodeService.getData(function(dataResponse) {
+     /* nodeService.getData(function(dataResponse) {
          $scope.data = dataResponse;
          console.log(dataResponse)
-     });
+     });*/
   });
+
+ 
