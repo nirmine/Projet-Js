@@ -25,6 +25,12 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
          templateUrl: 'friends/friends.html'
     })
 
+
+    .state('confirmation', {
+          url: '/confirmation',
+          templateUrl: 'confirmation/confirmation.html'
+     })
+
     .state('programs', {
          url: '/programs',
          templateUrl: 'programs/programs.html'
