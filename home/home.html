@@ -285,7 +285,8 @@ ul {
   background: #ffff;
   border-radius: 10px;
   box-shadow: 15px 15px 0px rgba(0, 0, 0, 0.2);
-  margin-top: 60px;
+  margin-top: 150px;
+  margin-bottom: 300px;
 }
 
 .sales {
@@ -414,7 +415,7 @@ ul {
         <div class="user-dashboard container">
           <h1>Hungry again ? Let's go eat !</h1>
 
-          <div class="row" >
+          <div class="row" style="margin-top: 50px;" >
               <div class="sales">
                 <h2>Postal Code </h2>
                 <div class="search">
@@ -422,73 +423,10 @@ ul {
                 </div>
               </div>
           </div>
-
-          <div class="row">
-            <div class="sales">
-              <h2>Invited Friends</h2>
-              <div class="search">
-                <input type="text" placeholder="Friend 1" >
-              </div>
-
-              <div class="search">
-                <input type="text" placeholder="Friend 2" >
-              </div>
-
-              <div class="search">
-                <input type="text" placeholder="Friend 3" >
-              </div>  
-            </div>
-          </div>
-
-
-          <div class="row">
-            <div class="col-md-5 col-sm-5 col-xs-12 gutter">
-          
-              <div class="sales">
-                <label for="start">Start date:</label>
-                <input type="date" id="start" name="trip-start" value="2021-12-24" min="2021-12-15" max="2050-12-12">
-              </div>
-            </div>
-            <div class="col-md-7 col-sm-7 col-xs-12 gutter">
-          
-              <div class="sales report">
-                <label for="appt">Choose a time: </label>
-                <input type="time" id="appt" name="appt" min="08:00" max="23:00" required>
-                <small>Restaurents close at 22h </small>
-          
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            
-          
-              <div class="sales">
-                <p> Here are the restaurent available near you :  </p>
-                <ul>
-                  <li> <a href="#">Chillis</a> </li>
-                  <li> <a href="#">Plan B</a> </li>
-                  <li> <a href="#">Pasta Cosi</a> </li>
-                  <li> <a href="#">Farm Ranch</a> </li>
-                </ul>
-              </div>
-            
-            
-          </div>
-
-          <div class="row">
-            <div class="sales">
-              <h2> Description </h2>
-              <div class="search">
-                <input type="text" placeholder="What you want to do later  ?" id="search">
-              </div>
-            </div>
-          </div>
-          
         
-          <div class="row">
-            <div style="margin:auto; padding-top : 50px;">
-              <a href="#" class="add-project" data-target="#add_project">Confirm  </a></li>
+          <div class="row" ng-controller="HomeController">
+            <div style="margin:auto;" >
+              <a ng-click="gotoconfirmation()" class="add-project" data-target="#add_project">Confirm Postal Code </a></li>
             </div>
           
           

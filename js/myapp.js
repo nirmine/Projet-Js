@@ -25,6 +25,12 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
          templateUrl: 'friends/friends.html'
     })
 
+
+    .state('confirmation', {
+          url: '/confirmation',
+          templateUrl: 'confirmation/confirmation.html'
+     })
+
     .state('programs', {
          url: '/programs',
          templateUrl: 'programs/programs.html'
@@ -68,7 +74,7 @@ myApp.service('nodeService', function($http) {
        }
       });
 
-  myApp.controller('AngularJSCtrl', function($scope, nodeService) {
+  myApp.controller('AngularJSCtrl', function($scope, dataService) {
       $scope.data = null;
       /*dataService.getData(function(dataResponse) {
           $scope.data = dataResponse;
@@ -77,8 +83,5 @@ myApp.service('nodeService', function($http) {
       {*/
         // alert("hi");
       //}
-      nodeService.getData(function(dataResponse) {
-         $scope.data = dataResponse;
-         console.log(dataResponse)
-     });
+     
   });

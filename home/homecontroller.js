@@ -21,6 +21,12 @@ myApp.controller('HomeController', ["$scope", "$state",
       $state.go("programs");
     }
 
+
+    $scope.gotoconfirmation = function () {
+      $state.go("confirmation");
+    }
+
+
  
   }
 ]);
