@@ -363,7 +363,7 @@
     }
 
     .sales h2 {
-        font-family: ;
+      
         color: #8492af;
         float: left;
         font-size: 21px;
@@ -373,7 +373,7 @@
     }
 
     h2 {
-        font-family: ;
+       
         color: #E36262;
         float: left;
         font-size: 21px;
@@ -430,7 +430,7 @@
 
     .search input:focus {
         border-bottom: 10px solid #FFB88C;
-        . line-height: 22px;
+         line-height: 22px;
         transition: 1s all;
     }
 </style>
@@ -510,7 +510,7 @@
 
 
                 <div class="user-dashboard container">
-                    <div class="container">
+                    <div class="container" ng-controller="friendController">
                         <div class="row">
                             <div class="col-12">
                                 <div class="card">
@@ -518,7 +518,7 @@
                                         <div class="card-title mb-4">
                                             <div class="d-flex justify-content-start">
                                                 <div class="image-container">
-                                                    <img src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/77420/burger-clipart-xl.png" id="imgProfile"
+                                                    <img src="https://refugedulacdulou.com/wp-content/uploads/2019/01/avatar-anonyme.png" id="imgProfile"
                                                         style="width: 150px; height: 150px" class="img-thumbnail" />
                                                     <div class="middle">
                                                         <input type="button" class="btn btn-secondary" id="btnChangePicture"
@@ -528,9 +528,9 @@
                                                 </div>
 
                                                 <div class="userData ml-3">
-                                                    <h2> Some Name </h2>
-                                                    <h6 class="d-block"><a href="javascript:void(0)">21</a> Programs </h6>
-                                                    <h6 class="d-block"><a href="javascript:void(0)">15 </a> Visited restaurants</h6>
+                                                    <h2> {{infos[0].firstName}} {{infos[0].lastName}}</h2>
+                                                    <!--<h6 class="d-block"><a href="javascript:void(0)">21</a> Programs </h6>
+                                                    <h6 class="d-block"><a href="javascript:void(0)">15 </a> Visited restaurants</h6>-->
                                                 </div>
 
                                                 <div class="ml-auto">
@@ -556,7 +556,7 @@
                                                         aria-labelledby="basicInfo-tab">
                     
                     
-                                                        <div class="row">
+                                                        <!--<div class="row">
                                                             <div class="col-sm-3 col-md-2 col-5">
                                                                 <label style="font-weight:bold;">Full Name</label>
                                                             </div>
@@ -564,7 +564,7 @@
                                                                 Jamshaid Kamran
                                                             </div>
                                                         </div>
-                                                        <hr />
+                                                        <hr />-->
                     
                                                         <div class="row">
                                                             <div class="col-sm-3 col-md-2 col-5">
@@ -582,7 +582,7 @@
                                                                 <label style="font-weight:bold;">Mail</label>
                                                             </div>
                                                             <div class="col-md-8 col-6">
-                                                                Something@gmail.com
+                                                                {{infos[0].email}}
                                                             </div>
                                                         </div>
                                                         <hr />
@@ -591,7 +591,7 @@
                                                                 <label style="font-weight:bold;">Phone Number</label>
                                                             </div>
                                                             <div class="col-md-8 col-6">
-                                                                +33 987456321
+                                                                {{infos[0].phone}}
                                                             </div>
                                                         </div>
                                                         <hr />
@@ -600,7 +600,7 @@
                                                                 <label style="font-weight:bold;">Address</label>
                                                             </div>
                                                             <div class="col-md-8 col-6">
-                                                                15, Rue charles fourier 
+                                                                {{infos[0].adresse}} 
                                                             </div>
                                                         </div>
                                                         <hr />

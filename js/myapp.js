@@ -1,6 +1,16 @@
 var myApp = angular.module('myApp', ['ui.router']);
 
+myApp.factory('storageService', ['$rootScope', function($rootScope) {
 
+  return {
+      get: function(key) {
+          return sessionStorage.getItem(key);
+      },
+      save: function(key, data) {
+          sessionStorage.setItem(key, data);
+      }
+  };
+}]);
 myApp.config(function($stateProvider, $urlRouterProvider) {
 
   $stateProvider

@@ -17,9 +17,9 @@ myApp.service('SignupService', function($http) {
      }
     });
 
-myApp.controller('SignupController', ["$scope", "$state", "sampleFactory","$http",
+myApp.controller('SignupController', ["$scope", "$state", "sampleFactory","$http","storageService",
 
-    function ($scope, $state, sampleFactory,$http) {
+    function ($scope, $state, sampleFactory,$http,storageService) {
        
         var formData = {
             firstName: "default",
@@ -49,8 +49,8 @@ myApp.controller('SignupController', ["$scope", "$state", "sampleFactory","$http
                 $scope.data = dataResponse;
                 console.log(dataResponse)
             });*/
-
-            
+            storageService.save('userFirstName',formData.firstName);
+            storageService.save('userLastName', formData.lastName);
 
             delete $http.defaults.headers.common['Content-Type, x-requested-with'];
             //this.sendData = function(callbackFunc,$info) {
@@ -61,7 +61,7 @@ myApp.controller('SignupController', ["$scope", "$state", "sampleFactory","$http
                     headers: {'Authorization': 'Token token=xxxxYYYYZzzz'},
                     data:formData
                  }).success(function(data){
-                   // $state.go("home");
+                    $state.go("home");
                    // return data;
                    //console.log(data)//la valeur dans le body du json
                    // alert('success signup');

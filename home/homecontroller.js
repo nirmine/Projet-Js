@@ -1,10 +1,10 @@
-myApp.controller('HomeController', ["$scope", "$state",
+myApp.controller('HomeController', ["$scope", "$state","storageService",
 
-  function($scope, $state) {
+  function($scope, $state,storageService) {
 
     //console.log('this is the homecontroller, hi!');
-
-
+    
+   // console.log(storageService.get('key'))
     $scope.gotologin = function() {
       $state.go("login");
     }
@@ -23,10 +23,16 @@ myApp.controller('HomeController', ["$scope", "$state",
 
 
     $scope.gotoconfirmation = function () {
+     // console.log($scope.postalCode)
+      storageService.save('codeP', $scope.postalCode);
       $state.go("confirmation");
     }
 
-
+    $scope.logOut = function () {
+      storageService.save('userFirstName',"");
+      storageService.save('userLastName', "");
+      $state.go("login");
+  }
  
   }
 ]);

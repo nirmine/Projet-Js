@@ -117,12 +117,12 @@
                 <form class="signup-form" ng-controller="SignupController" ng-submit="submitForm()">
                     <div class="form-group">
                         <label for="exampleInputEmail1" class="text-uppercase">First Name</label>
-                        <input type="text" class="form-control" placeholder="" ng-model="form.firstName">
+                        <input type="text" class="form-control" placeholder="" ng-model="form.firstName"  required>
                     </div>
 
                     <div class="form-group">
                         <label for="exampleInputEmail1" class="text-uppercase">Last Name</label>
-                        <input type="text" class="form-control" placeholder="" ng-model="form.lastName">
+                        <input type="text" class="form-control" placeholder="" ng-model="form.lastName" required>
                     </div>
 
                     <!--<div class="form-group">

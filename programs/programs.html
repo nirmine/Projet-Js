@@ -630,17 +630,14 @@
                         <div class="col-md-5" ng-controller="HomeController">
                             <div class="header-rightside">
                                 <ul class="list-inline header-top pull-right ">
-                                    <li class="hidden-xs"><a style="color:#ffffff;" ng-click="gotologin()"
+                                    <li class="hidden-xs"><a style="color:#ffffff;" ng-click="logOut()"
                                             class="add-project" data-toggle="modal" data-target="#add_project">Log
                                             out</a></li>
-                                    <a href="#" class="icon-info">
-                                        <i class="fa fa-bell" aria-hidden="true"></i>
-                                        <span class="label label-primary">3</span>
-                                    </a>
+                                   
                                     </li>
                                     <li class="dropdown">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img
-                                                src="https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                                                src="https://refugedulacdulou.com/wp-content/uploads/2019/01/avatar-anonyme.png"
                                                 alt="user">
                                         </a>
                                         <ul class="dropdown-menu" ng-controller="HomeController">
@@ -664,13 +661,61 @@
                 </div>
 
 
+
+                <div class="row">
+                    <header>
+                        <div class="col-md-5" ng-controller="HomeController">
+                            <div class="header-leftside">
+                                <ul class="list-inline header-top pull-left ">
+                                    <li> <a href="#" class="icon-info">
+                                        <i class="fa fa-bell" aria-hidden="true"></i>
+                                        <span class="label label-primary">0</span>
+                                    </a></li>
+                                   <li style="margin-left: 0px;"><h3>Check your invitations </h3></li>
+                                    
+                                   
+                                </ul>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col-md-5" ng-controller="notifController">
+                            <div class="header-leftside">
+                                <ul class="list-inline header-top pull-left ">
+                                    <li ng-repeat="r in programs"> <p>*Date with:<strong>{{r.owner}}</strong> in <strong>{{r.restauName}}</strong> restaurant.Address:<strong>{{r.restauAddress}}</strong> on: <strong> {{r.programDate.split['T'][0]}}</strong> at: <strong>{{r.programDate.split('T')[1].split('Z')[0].split(':')[0]}}:{{r.programDate.split('T')[1].split('Z')[0].split(':')[1]}} </strong> </p></li>
+                                   
+                                    
+                                   
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </header>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 <div class="user-dashboard container">
                     <h1>Let's see what we're gonna do ! </h1>
 
-                    <div class="row">
+                    <div class="row" ng-controller="backController">
                             <div class="[ col-xs-12 col-sm-8 ]">
                                 <ul class="event-list">
-                                    <li>
+                                    <!--<li>
                                         <time datetime="2014-07-20 2000">
                                             <span class="day">20</span>
                                             <span class="month">Jan</span>
@@ -691,9 +736,9 @@
                                                 <li class="google-plus"><a href="#google-plus"><span class="fa fa-trash"></span></a></li>
                                             </ul>
                                         </div>
-                                    </li>
+                                    </li>-->
 
-                                    <li>
+                                    <!--<li>
                                         <time datetime="2014-07-20 2000">
                                             <span class="day">20</span>
                                             <span class="month">Jan</span>
@@ -714,29 +759,28 @@
                                                 <li class="google-plus"><a href="#google-plus"><span class="fa fa-trash"></span></a></li>
                                             </ul>
                                         </div>
-                                    </li>
+                                    </li>-->
 
-                                    <li>
+                                    <li ng-repeat="r in programs">
                                         <time datetime="2014-07-20 2000">
-                                            <span class="day">20</span>
-                                            <span class="month">Jan</span>
+                                            <span class="day">{{r.programDate.split('T')[0].split('-')[2]}}</span>
+                                            <span class="month">{{r.programDate.split('T')[0].split('-')[1]}}</span>
                                             <span class="year">2014</span>
                                             <span class="time">8:00 PM</span>
                                         </time>
                                         <div class="info">
-                                            <h2 class="title">Mouse0270's 24th Birthday!</h2>
-                                            <p class="desc">Bar Hopping in Erie, Pa.</p>
+                                            <h2 class="title">Meeting in : {{r.restauName}}</h2>
+                                            <p class="desc">{{r.restauAddress}}</p>
                                             <ul>
-                                                <li style="width:33%;">10:30 AM <span class="fa fa-clock-o"></span></li>
+                                                <li style="width:33%;">{{r.programDate.split('T')[1].split('Z')[0].split(':')[0]}}:{{r.programDate.split('T')[1].split('Z')[0].split(':')[1]}} <span class="fa fa-clock-o"></span></li>
                                                 <li style="width:33%;"><a data-toggle="modal" data-target="#squarespaceModal"><span class="fa fa-info"></span></a>
                                                 </li>
-                                                <li style="width:34%;"><a data-toggle="modal" data-target="#squarespaceModal"> Friends<span class="fa fa-users"
-                                                            style="margin-left: 10px;"></span></a></li>
+                                                <li style="width:34%;">with: <span class="fa fa-users" style="margin-left: 10px;">{{r.friends}}</span></li>
                                             </ul>
                                         </div>
                                         <div class="social">
                                             <ul>
-                                                <li class="google-plus"><a href="#google-plus"><span class="fa fa-trash"></span></a></li>
+                                                <li class="google-plus"><a href="" ng-click="delete(r.programDate)"><span class="fa fa-trash" ></span></a></li>
                                             </ul>
                                         </div>
                                     </li>
@@ -797,8 +841,7 @@
 
 
 
-<div class="modal" id="squarespaceModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
-    aria-hidden="true">
+<div class="modal" id="squarespaceModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true" ng-hide="expression">
     <div class="modal-dialog">
 
         <div class="modal-content">
@@ -808,13 +851,13 @@
                         class="sr-only">Close</span></button>
             </div>
 
-            <div class="modal-body">
+            <div class="modal-body" ng-controller="hideController">
 
                 <!-- content goes here -->
                     <div>
                         <label style="padding-bottom: 20px;">Friends</label>
                         <ul>
-                            <li>Sami piseron</li>
+                            <li>{{friends}}</li>
                             <li>Rabie Bouden</li>
                             <li>Fathi haddaoui</li>
                         </ul>
@@ -830,4 +873,3 @@
         </div>
     </div>
 </div>
-<!--<iframe src="https://opendata.paris.fr/explore/embed/dataset/restaurants-casvp/map/?disjunctive.code&disjunctive.nom_restaurant&disjunctive.type&location=13,48.84395,2.3606&basemap=jawg.streets&static=true&datasetcard=true&scrollWheelZoom=true" width="400" height="300" frameborder="0"></iframe>-->
